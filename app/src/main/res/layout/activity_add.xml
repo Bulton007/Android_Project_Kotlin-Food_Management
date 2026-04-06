@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/bg_purple_style">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- TITLE -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="Add New Product"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <!-- IMAGE PICKER -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardSelectImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="#E9E9E9"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="0dp">
+
+                <ImageView
+                    android:id="@+id/imgProductPreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_black_rounded_border"
+                    android:scaleType="centerCrop"
+                    android:textColor="@color/black" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- PRODUCT NAME -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Product Name"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etProductName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/bg_black_rounded_border"
+                android:hint="Enter product name"
+                android:padding="12dp"
+                android:textColor="@color/black" />
+
+            <!-- PRICE -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Price ($)"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etProductPrice"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/bg_black_rounded_border"
+                android:hint="0.00"
+                android:inputType="numberDecimal"
+                android:padding="12dp"
+                android:textColor="@color/black" />
+
+            <!-- RATING -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Rating"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etProductRating"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/bg_black_rounded_border"
+                android:hint="0 - 5"
+                android:inputType="numberDecimal"
+                android:padding="12dp"
+                android:textColor="@color/black" />
+
+            <!-- CATEGORY -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Category"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spCategory"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textColor="@color/black"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/bg_black_rounded_border"
+                android:padding="8dp" />
+
+            <!-- DESCRIPTION -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Description"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etProductDesc"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/bg_black_rounded_border"
+                android:gravity="top"
+                android:textColor="@color/black"
+                android:hint="Tell us about the product..."
+                android:inputType="textMultiLine"
+                android:padding="12dp" />
+
+            <!-- SAVE BUTTON -->
+            <Button
+                android:id="@+id/btnSaveProduct"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:backgroundTint="@color/design_default_color_primary_dark"
+                android:text="Save Product"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:cornerRadius="12dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

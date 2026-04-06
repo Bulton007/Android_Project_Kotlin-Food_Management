@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme -->
+    <style name="Base.Theme.Food_Retrofit" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <!-- ✅ STATUS BAR BLACK -->
+        <item name="android:statusBarColor">@android:color/black</item>
+
+        <!-- ✅ WHITE ICONS (time, battery, wifi) -->
+        <item name="android:windowLightStatusBar">false</item>
+
+        <!-- ✅ Optional: Navigation bar (bottom) -->
+        <item name="android:navigationBarColor">@android:color/black</item>
+
+    </style>
+
+    <style name="Theme.Food_Retrofit" parent="Base.Theme.Food_Retrofit" />
+
+    <style name="CircleImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">15dp</item>
+    </style>
+
+</resources>
